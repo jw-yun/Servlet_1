@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,5 +33,23 @@
     </ul>
   </div>
 </nav>
+<table>
+	<tr>
+		<td>num</td>
+		<td>title</td>
+		<td>writer</td>
+		<td>regDate</td>
+		<td>hit</td>
+	</tr>
+	<c:forEach items="${board}" var="ar">
+	<tr>
+		<td>${ar.num}</td>
+		<td>${ar.title}</td>
+		<td>${ar.writer}</td>
+		<td>${ar.date}</td>
+		<td>${ar.hit}</td>
+	</tr>
+	</c:forEach>
+</table>
 </body>
 </html>
